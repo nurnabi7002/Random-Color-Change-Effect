@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Disco color change</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+         main {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a {
+            color: white;
+            padding: 20px;
+            background-color: black;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<main>
+    <a href="index.html">Go To The Home Page</a>
+</main>
+
+
+
+
+    <script>
+        // Color changing logic
+
+        setInterval(() => {
+            let randomNumber = Math.floor(Math.random() * 16777215); // Getting a number from math.random() and multiply with a constent number 16777215 and get the int number by math.floor()
+            let randomHexaNumber = '#' + randomNumber.toString(16); // Convert and build that random number into a hexa code that must for color by tostring(16) and adding '#'
+            document.body.style.backgroundColor = randomHexaNumber; // Then apply to the body
+        }, 50); // Intervel the system to body
+
+    </script>
+
+</body>
+</html>
